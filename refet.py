@@ -10,6 +10,7 @@ while True:
     if shonot(sod):
         break
 
+nihush = '0000'
 nihush = st.text_input('ניחוש שלך 4 ספרות  ')
 # להוסיף בדיקה שקיבלנו בדיוק מספר של 4 ספרות
 if not nihush.isnumeric() or len(nihush) != 4:
