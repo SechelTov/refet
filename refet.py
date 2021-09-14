@@ -15,7 +15,6 @@ nihush = st.text_input('0000', 'ניחוש שלך 4 ספרות  ')
 
 if nihush == sod:
     st.write('!כל הכבוד')
-    break
 
 if not nihush.isnumeric() or len(nihush) != 4:
     st.write('!!!ביקשתי 4 ספרות')
