@@ -10,7 +10,7 @@ while True:
     if shonot(sod):
         break
 
-nihush = st.text_input('ניחוש שלך 4 ספרות  ', '0000')
+nihush = st.text_input('ניחוש שלך 4 ספרות  ')
 
 if nihush == sod:
     st.write('!כל הכבוד')
