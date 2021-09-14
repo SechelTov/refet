@@ -1,4 +1,4 @@
-import streamline as st
+import streamlit as st
 import random
 
 # פונקציה שבודקת אם כל הספרות שונות
