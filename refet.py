@@ -9,15 +9,20 @@ while True:
     sod = ''.join( [str(random.randint(0,9)) for _ in range(4)] )     # range טווח
     if shonot(sod):
         break
+mone_nihushim = 0
 
 nihush = st.text_input('ניחוש שלך 4 ספרות  ')
-
-if nihush == sod:
-    st.write('!כל הכבוד')
 
 if not nihush.isnumeric() or len(nihush) != 4:
     st.write('!!!ביקשתי 4 ספרות')
 else:
+    mone_nihushim = mone_nihushim + 1
+    
+    # בדיקה לניחוש נכון
+    if nihush == sod:
+        st.write('!כל הכבוד')
+        st.write('השתמשת ב ', mone_nihushim, 'ניחושים')
+    
     parot = 0
     shvarim = 0
 
