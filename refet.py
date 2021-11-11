@@ -9,7 +9,7 @@ while True:
     sod = ''.join( [str(random.randint(0,9)) for _ in range(4)] )     # range טווח
     if shonot(sod):
         break
-st.write('סוד ', sod)
+#st.write('סוד ', sod)
 mone_nihushim = 0
 
 nihush = st.text_input('ניחוש שלך 4 ספרות  ')
