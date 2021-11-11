@@ -5,30 +5,33 @@ import random
 def shonot(mispar):
     return len(mispar) == len(set([c for c in mispar]))
 
-while True:
-    sod = ''.join( [str(random.randint(0,9)) for _ in range(4)] )     # range טווח
-    if shonot(sod):
-        break
-#st.write('סוד ', sod)
-mone_nihushim = 0
+if 'sod' not in st.session_state:
+    while True:
+        st.session_state['sod'] = ''.join( [str(random.randint(0,9)) for _ in range(4)] )     # range טווח
+        if shonot(st.session_state['sod']):
+            break
+    st.write('סוד ', st.session_state['sod'])
+
+if 'mone_nihushim' not in st.session_state:
+    st.session_state['mone_nihushim'] = 0
 
 nihush = st.text_input('ניחוש שלך 4 ספרות  ')
 
 if not nihush.isnumeric() or len(nihush) != 4:
     st.write('!!!ביקשתי 4 ספרות')
 else:
-    mone_nihushim = mone_nihushim + 1
+    st.session_state['mone_nihushim'] += 1
     
     # בדיקה לניחוש נכון
-    if nihush == sod:
+    if nihush == st.session_state['sod']:
         st.write('!כל הכבוד')
-        st.write('השתמשת ב ', mone_nihushim, 'ניחושים')
+        st.write('השתמשת ב ', st.session_state['mone_nihushim'], 'ניחושים')
     
     parot = 0
     shvarim = 0
 
     for i, n in enumerate(nihush):    # תמספר
-        for j, s in enumerate(sod):
+        for j, s in enumerate(st.session_state['sod']):
             if n == s:
                 if i == j:
                     shvarim = shvarim +1
