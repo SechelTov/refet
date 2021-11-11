@@ -10,7 +10,6 @@ if 'sod' not in st.session_state:
         st.session_state['sod'] = ''.join( [str(random.randint(0,9)) for _ in range(4)] )     # range טווח
         if shonot(st.session_state['sod']):
             break
-    st.write('סוד ', st.session_state['sod'])
 
 if 'mone_nihushim' not in st.session_state:
     st.session_state['mone_nihushim'] = 0
